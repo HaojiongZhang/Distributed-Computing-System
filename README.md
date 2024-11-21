@@ -1,4 +1,4 @@
-```markdown
+
 # Distributed Computing System
 
 This project is a distributed computing system modeled after Hadoop with SQL capabilities. It uses MapReduce and includes an HDFS-like distributed file system.
