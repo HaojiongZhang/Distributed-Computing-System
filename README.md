@@ -1,25 +1,53 @@
+```markdown
+# Distributed Computing System
 
-To run the projects:
-    Distributed Grep: go run main.go helpers.go  
-    Membership List: start normal node with go run main.go
-    Distributed Computing: go run main.go mapleJuice.go rpcHandler.go consistantHashing.go
-         flags:
-            -intro: run as introducer (*defauls to vm7)
-            -verbose: print debug statements
-            -bps: print bandwidth (bytes/sec)
-            -fp: print false positive rates per minute
-            -leader: run node as leader
+This project is a distributed computing system modeled after Hadoop with SQL capabilities. It uses MapReduce and includes an HDFS-like distributed file system.
 
+## How to Run the Project
 
-To run the unit tests:
-    Distributed Grep: go run UnitTest.go helpers.go
+### Distributed Grep
+```bash
+go run main.go helpers.go
+```
 
+### Membership List
+Start a normal node with:
+```bash
+go run main.go
+```
 
-Distributed Grep Details: 
-    The grep command is as follows:
-        grep [options] pattern 
-    Example: 
-        grep -ce stars
+### Distributed Computing
+Run with:
+```bash
+go run main.go mapleJuice.go rpcHandler.go consistantHashing.go
+```
 
-To run unit tests, we need all the log files locally to compare a local grep with the distributed grep result.
+#### Flags:
+- `-intro` : Run as introducer (defaults to `vm7`).
+- `-verbose` : Print debug statements.
+- `-bps` : Print bandwidth (bytes/second).
+- `-fp` : Print false positive rates per minute.
+- `-leader` : Run the node as leader.
 
+## Running Unit Tests
+
+### Distributed Grep Unit Tests
+Run with:
+```bash
+go run UnitTest.go helpers.go
+```
+
+To run unit tests, ensure all log files are available locally. These are used to compare the results of a local `grep` with the distributed `grep`.
+
+## Distributed Grep Details
+
+The distributed `grep` command supports the following syntax:
+```bash
+grep [options] pattern
+```
+
+#### Example:
+```bash
+grep -ce stars
+```
+```
